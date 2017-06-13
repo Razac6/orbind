@@ -13,37 +13,47 @@
     <div class="col-md-6">
       <div class="form-group">
         <label for="exampleInputEmail1">Header</label>
-        <input [(ngModel)]="text" [value]="searchValue" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter header">
-       
+        <input [(ngModel)]="text" [value]="searchValue" type="text" class="form-control" placeholder="Enter header">
+
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Content</label>
-        <input [(ngModel)]="content" [value]="searchValue" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter content">
-        
+        <textarea [(ngModel)]="content" rows="10" [value]="searchValue" type="text" class="form-control" placeholder="Enter content"></textarea>
+
       </div>
 
 
     </div>
     <div class="col-md-6">
-<h6>Look on this :)</h6>
-<div class="card">
-  <div class="card-block">
-    <p><code>{{text}}</code></p>
-    <p><code>{{content}}</code></p>
-  </div>
-</div>
-<div class="row"></div>
- <div class="form-group has-success">
-    <h6 for="exampleTextarea">Get Code:</h6>
-    <textarea   class="form-control" id="exampleTextarea" rows="5" #inputTarget>
-     <header> {{text}}</header>
+      <h6>Look on this :)</h6>
+      <div class="card">
+        <div class="card-block">
+          <p><code>{{text}}</code></p>
+          <p><code>{{content}}</code></p>
+        </div>
+      </div>
+      <div class="row"></div>
+      <div class="form-group has-success">
+        <h6 for="exampleTextarea">Get Code:</h6>
+        <textarea class="form-control" id="exampleTextarea" rows="5" #inputTarget>
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <header> {{text}}</header>
      <section> {{content}}</section>
+</body>
+</html>
+ 
     </textarea>
-  </div>
-  <button class="btn btn-default" [ngxClipboard]="inputTarget">Copy</button>
-  <button class="btn btn-default" (click)="clearSearch()">Clear</button>
+      </div>
+      <button class="btn btn-default" [ngxClipboard]="inputTarget">Copy</button>
+      <button class="btn btn-default" (click)="clearSearch()">Clear</button>
 
     </div>
   </div>
 </div>
-
