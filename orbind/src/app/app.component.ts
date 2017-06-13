@@ -17,11 +17,6 @@ getMeData(){
     return strTime + ' years old app';
 } 
 
-getMyCopy(){
- console.log('copy');
- 
-  }
-
   clearSearch() {
    window.location.reload();
   }
