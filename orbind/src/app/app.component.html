@@ -1,9 +1,49 @@
 <!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
-</div>
 
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">{{title}}</h1>
+    <p class="lead">This is a Angular2 form app with bootstrap4</p>
+    <small>v0.1</small>
+    <p><small>{{getMeData()}}</small></p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Header</label>
+        <input [(ngModel)]="text" [value]="searchValue" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter header">
+       
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Content</label>
+        <input [(ngModel)]="content" [value]="searchValue" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter content">
+        
+      </div>
+
+
+    </div>
+    <div class="col-md-6">
+<h6>Look on this :)</h6>
+<div class="card">
+  <div class="card-block">
+    <p><code>{{text}}</code></p>
+    <p><code>{{content}}</code></p>
+  </div>
+</div>
+<div class="row"></div>
+ <div class="form-group has-success">
+    <h6 for="exampleTextarea">Get Code:</h6>
+    <textarea   class="form-control" id="exampleTextarea" rows="5" #inputTarget>
+     <header> {{text}}</header>
+     <section> {{content}}</section>
+    </textarea>
+  </div>
+  <button class="btn btn-default" [ngxClipboard]="inputTarget">Copy</button>
+  <button class="btn btn-default" (click)="clearSearch()">Clear</button>
+
+    </div>
+  </div>
+</div>
 
